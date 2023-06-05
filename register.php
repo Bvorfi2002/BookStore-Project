@@ -6,7 +6,7 @@ if(isset($_POST['submit'])){
 
   $name=mysqli_real_escape_string($conn,$_POST['name']);
   $email=mysqli_real_escape_string($conn,$_POST['email']);
-  $password=mysqli_real_escape_string($conn,$_POST['password']);
+  $pass=mysqli_real_escape_string($conn,$_POST['password']);
   $cpass=mysqli_real_escape_string($conn,$_POST['cpassword']);
   $user_type=$_POST['user_type'];
 
@@ -40,6 +40,22 @@ else{
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+
+    
+
+<?php
+if (isset($message)){
+  foreach($message as $message){
+    echo '
+    <div class="message">
+      <span>'.$message.'</span>
+      <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+    </div>
+    ';
+  }
+}
+?>
+
       <div class="form-container">
       <form action="" method="post">
         <h3>Register now</h3>
