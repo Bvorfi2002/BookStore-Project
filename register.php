@@ -20,7 +20,7 @@ else{
     $message[]='confrim password not matched!';
   }
   else{
-    mysqli_query($conn,"INSERT INTO `users`(name,email,password,user_type) VALUES('$name','$email','$cpass','user_type')") or die('query failed');
+    mysqli_query($conn,"INSERT INTO `users`(name,email,password,user_type) VALUES('$name','$email','$cpass','$user_type')") or die('query failed');
     $message[]='registered successfully';
     header('location:login.php');
   }

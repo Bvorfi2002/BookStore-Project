@@ -18,7 +18,7 @@
         <div class="account-box">
             <p>username : <span><?php echo $_SESSION['admin_name'];?> </span></p>
             <p>email : <span><?php echo $_SESSION['admin_email'];?> </span></p>
-            <p>username : <span><?php echo $_SESSION['admin_name'];?> </span></p>
+            
 
         </div>
 
