@@ -29,6 +29,49 @@ if(!isset($admin_id)){
     <body>
         <?php include 'admin_header.php'; ?>
 
+        <!--Admin dashboard section starts-->
+
+        <section class="dashboard">
+
+        <h1 class="heading">Dashboard</h1>
+
+        <div class="box-container">
+        <div class="box">
+        <?php
+        $total_pendings=0;
+        $select_pending=mysqli_query($conn, "SELECT total_price FROM `orders`WHERE payment_status='pending") or die('query failed');
+
+        if(mysqli_num_rows($select_pending)>0)
+        {
+            while($fetch_pending=mysqli_fetch_assoc($select_pending)){
+                $total_price=$fetch_pendings['total_price'];
+                $total_pendings+=$total_price;
+            };
+        };
+        
+        ?>
+        <h3> <?php echo $total_pendings; ?></h3>
+        <p>Total pendings</p>
+        
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+        <!--Admin dashboard section ends-->
+
 
 
         <!--custom admin js file link -->
