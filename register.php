@@ -24,6 +24,7 @@ else{
     $message[]='registered successfully';
     header('location:login.php');
   }
+  ju
 }
 }
 ?>
