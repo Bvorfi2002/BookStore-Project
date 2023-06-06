@@ -43,3 +43,20 @@
 *::-webkit-scrollbar-thumb{
     background-color: var(--purple);
 }
+
+.header{
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+}
+
+.header .flex{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    justify-content: space-between;
+    position:relative ;
+  
+}
