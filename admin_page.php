@@ -27,5 +27,10 @@ if(!isset($admin_id)){
         <link rel="stylesheet" href="css/admin_style.css">
     </head>
     <body>
+        <?php include 'admin_header.php'; ?>
+
+
+
+
     </body>
 </html>
