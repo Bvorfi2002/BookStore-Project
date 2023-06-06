@@ -45,6 +45,10 @@ html{
     font-size: 62.5%;
     overflow-x:hidden ;
 }
+section{
+    padding: 3rem 2rem;
+}
+
 
 .message{
     position: sticky;
@@ -110,7 +114,12 @@ html{
     background-color:var(--red) ;
 }
 
-
+@keyframes fadeIn{
+    0%{
+        transform: translate(1rem);
+        opacity: .2s;
+    }
+}
 
 
 .form-container{
@@ -163,4 +172,32 @@ html{
 
 .form-container form p a:hover{
     text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
 }
