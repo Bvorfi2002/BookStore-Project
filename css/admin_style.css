@@ -58,5 +58,6 @@
     padding: 2rem;
     justify-content: space-between;
     position:relative ;
-  
+    max-width: 1200px ;
+    margin:0 auto
 }
