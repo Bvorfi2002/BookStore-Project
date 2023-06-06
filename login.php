@@ -16,7 +16,7 @@ if(mysqli_num_rows($select_users)>0){
 
   $row = mysqli_fetch_assoc($select_users);
 
-  if($row['user_type'] == 'admin'){
+  if($row['user_type'] == 'Admin'){
 
     $_SESSION['admin_name'] = $row['name'];
     $_SESSION['admin_email'] = $row['email'];
