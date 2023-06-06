@@ -57,6 +57,14 @@ section{
     padding: 3rem 2rem;
 }
 
+.title{
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 4rem;
+}
+
 .message{
     position: sticky;
     top: 0;
@@ -184,7 +192,8 @@ section{
     padding: 2rem;
     text-align: center;
     border-radius: .5rem;
-    border:var(--border) ;
+    border:var(--border);
+    background-color: var(--white);
     display: none;
     animation: fadeIn .2s linear;
 }
@@ -231,6 +240,21 @@ section{
     text-align: center;
 }
 
+.dashboard .box-container .box h3{
+    font-size: 5rem;
+    color: var(--black);
+}
+
+.dashboard .box-container .box p{
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--light-bg);
+    color: var(--purple);
+    font-size: 2rem;
+    border-radius: .5rem;
+    border: var(--border);
+
+}
 
 
 
