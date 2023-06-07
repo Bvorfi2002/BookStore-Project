@@ -17,7 +17,7 @@ if(mysqli_num_rows($select_users)>0){
 }
 else{
   if($pass != $cpass){
-    $message[]='confrim password not matched!';
+    $message[]='confirm password not matched!';
   }
   else{
     mysqli_query($conn,"INSERT INTO `users`(name,email,password,user_type) VALUES('$name','$email','$cpass','$user_type')") or die('query failed');
@@ -45,6 +45,9 @@ else{
 
     
 
+
+
+
 <?php
 if (isset($message)){
   foreach($message as $message){
@@ -54,6 +57,7 @@ if (isset($message)){
       <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
     </div>
     ';
+   
   }
 }
 ?>
