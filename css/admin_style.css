@@ -309,17 +309,13 @@ section{
     color: var(--black);
 }
 
-<<<<<<< HEAD
 .show-products .box-container{
-=======
 .users .box-container{
->>>>>>> d3d02ec495ebcc5f64b678655782b6bf483a3b13
     display: grid;
     grid-template-columns: repeat(auto-fit, 30rem);
     justify-content: center;
     gap: 1.5rem;
     max-width: 1200px;
-<<<<<<< HEAD
     margin:0 auto;
     align-items: flex-start;
 
@@ -367,11 +363,9 @@ section{
     top: 0; left:0;
     z-index: 1200;
     width: 100%;
-=======
     margin: 0 auto;
     align-items: flex-start;
 }
->>>>>>> d3d02ec495ebcc5f64b678655782b6bf483a3b13
 
 .users .box-container .box{
     background-color: var(--white);
@@ -382,7 +376,6 @@ section{
     text-align: center;
 
 }
-<<<<<<< HEAD
 
 .edit-product-form form{
     width: 50rem;
@@ -409,8 +402,6 @@ section{
     width: 100%;
 
 }
-=======
->>>>>>> d3d02ec495ebcc5f64b678655782b6bf483a3b13
 
 .users .box-container .box p{
     padding-bottom: 1.5rem;
