@@ -29,6 +29,23 @@ if(!isset($user_id)){
     <body>
         <?php include 'header.php';?>
 
+        <section class="home">
+            <div class="content">
+                <h3>Hand Picked Book to your door</h3>
+                <p>Lorem ipsum</p>
+                <a href="about.php" class="white-btn">discover more</a>
+
+
+
+            </div>
+
+
+
+        </section>
+
+       
+
+       <?php include 'footer.php';?>
        <!-- costum js file link-->
 
        <script src="js/script.js"></script>

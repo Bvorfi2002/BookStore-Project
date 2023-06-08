@@ -116,6 +116,11 @@ section{
     background-color:var(--red) ;
 }
 
+.white-btn:hover{
+    background-color: var(--white);
+    color: var(--black);
+}
+
 @keyframes fadeIn{
     0%{
         transform: translateY(1rem);
@@ -303,6 +308,80 @@ section{
     margin-top: 0;
 }
 
+.home{
+    min-height: 60vh;
+    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(../images/bg-image.jpg) no repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+.footer {
+    background-color: var(--light-bg);
+}
+
+.footer .box-container{
+    max-width: 1200px;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap: 3rem;
+}
+
+.footer .box-container .box h3{
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+.footer .box-container .box p,
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.7rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box p i,
+.footer .box-container .box a i{
+    color: var(--purple);
+    padding-right: .5rem;
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+    
+}
+
+.footer .box-container .box a {
+    text-decoration: none;
+    
+}
+
+.footer .box-container .box a:hover {
+    color: var(--purple);
+    text-decoration: underline;
+}
+
+.footer .credit{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--light-color);
+    border-top:var(--border);
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+}
+
+.footer .credit span{
+    color: var(--purple);
+}
 
 
 
