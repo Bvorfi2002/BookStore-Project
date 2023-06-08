@@ -43,7 +43,7 @@ if(!isset($admin_id)){
 
          if(mysqli_num_rows($select_pending)>0)
          {
-            while($fetch_pending=mysqli_fetch_assoc($select_pending)){
+            while($fetch_pendings=mysqli_fetch_assoc($select_pending)){
                 $total_price=$fetch_pendings['total_price'];
                 $total_pendings+=$total_price;
             };
