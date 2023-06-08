@@ -49,6 +49,19 @@ if(isset($_GET['delete'])){
     header('location:admin_products.php');
 }
 
+if(isset($_POST['update_product'])){
+    $update_p_id = $_POST['update_p_id'];
+    $update_name = $_POST['update_name'];
+    $update_price = $_POST['update_price'];
+
+    mysqli_query($conn, "UPDATE `products` SET name = '$update_name', price = '$update_price' WHERE id = '$update_p_id'") or die ('query failed');
+
+    $update_image = $_FILES[''];
+    
+    if(!empty())
+
+}
+
 ?>
 
 <!DOCTYPE html>
