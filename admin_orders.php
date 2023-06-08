@@ -44,7 +44,7 @@ if(isset($_GET['delete'])){
 
         <section class="orders">
 
-        <h1 class=""title>Placed orders</h1>
+        <h1 class="title">Placed orders</h1>
 
         <div class="box-container">
 

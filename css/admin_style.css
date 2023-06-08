@@ -62,7 +62,7 @@ section{
     text-align: center;
     border: var(--border);
     background-color: var(--white);
-    color: var(red);
+    color: var(--red);
     font-size: 2rem;
 }
 
