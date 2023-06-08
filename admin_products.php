@@ -41,8 +41,12 @@ if(isset($_POST['add_product'])){
         }
     }
 
+}
 
-
+if(isset($_GET['delete'])){
+    $delete_id = $_GET['delete'];
+    mysqli_query($conn,"DELETE FROM `products` WHERE id = '$delete_id'") or die('query failed');
+    header('location:admin_products.php');
 }
 
 ?>
@@ -116,6 +120,38 @@ if(isset($_POST['add_product'])){
         ?>
 
        </div>
+
+       </section>
+
+       <section class="edit-product-form">
+        
+         <?php
+          if(isset($_GET['update'])){
+            $update_id = $_GET['update'];
+            $update_query = mysqli_query($conn,"SELECT * FROM `products` WHERE id = '$update_id'") or die('query failed');
+
+            if(mysqli_num_rows($update_query) > 0){
+                while($fetch_update = mysqli_fetch_assoc($update_query)){
+
+         ?>
+         <form action="" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="update_p_id" value="<?php echo $fetch_update['id']; ?>">
+            <input type="hidden" name="update_old_image" value="<?php echo $fetch_update['image']; ?>">
+            <img src="uploaded_img/<?php echo $fetch_update['image']; ?>" alt="">
+            <input type="text" name="update_name" value="<?php echo $fetch_update['name']; ?>" class="box" required placeholder="Enter Product Name">
+            <input type="number" name="update_price" value="<?php echo $fetch_update['price']; ?>" min="0" class="box" required placeholder="Enter Product Price">
+            <input type="file" class="box" name="update_image" accept="image/jpg, image/jpeg, image/png">
+            <input type="submit" value="update" name="update_product" class="btn">
+            <input type="reset" value="cancel" id="close-update" class="option-btn">
+         </form>
+         <?php
+                }
+                }
+
+            }else{
+                echo'<script>document.querySelector(".edit-product-form").style.display = "none";</script>';
+            }
+         ?>
 
        </section>
         
