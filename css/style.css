@@ -81,6 +81,14 @@ section{
     transform: rotate(90deg);
 }
 
+.title{
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 4rem;
+}
+
 .btn,
 .option-btn,
 .delete-btn,
@@ -93,6 +101,7 @@ section{
     font-size: 1.8rem;
     border-radius: .5rem;
     text-transform: capitalize;
+    text-decoration: none;
 }
 
 .btn:hover,
@@ -198,6 +207,12 @@ section{
 .header .header-2{
     background-color: var(--white);
     box-shadow: var(--box-shadow);
+}
+
+.header .header-2.active{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
 }
 
 .header .header-2 .flex{
@@ -309,7 +324,7 @@ section{
 }
 
 .home{
-    min-height: 60vh;
+    min-height: 70vh;
     background:linear-gradient(rgba(0,0,0,7),rgba(0,0,0,7)),url(../images/671822c2f63dd5f65d8fd15c9710420b.jpg)no-repeat;
     background-size: cover;
     background-position: center;
@@ -317,6 +332,77 @@ section{
     align-items: center;
     justify-content: center;
 }
+
+.home .content{
+    text-align: center;
+    width: 50rem;
+}
+
+.home .content h3{
+    font-size: 4rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.home .content p{
+    font-size: 2rem;
+    color: var(--light-white);
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+.products .box-container{
+    max-width: 1200px;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,30rem);
+    align-items: flex-start;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.products .box-container .box{
+    border-radius: .5rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    text-align: center;
+    border: var(--border);
+    position: relative;
+}
+.products .box-container .box img{
+    height:30rem;
+}
+
+.products .box-container .box .name{
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.products .box-container .box .qty{
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    border-radius: .5rem;
+    border: var(--border);
+    margin: 1rem 0;
+    font-size: 2rem;
+
+
+}
+
+.products .box-container .box .price{
+   position: absolute;
+   top: 1rem; left: 1rem;
+   border-radius: .5rem;
+   padding: 1rem;
+   font-size: 2.5rem;
+   color: var(--white);
+   background-color: var(--red);
+}
+
+
+
 
 
 
@@ -429,12 +515,18 @@ section{
         font-size: 2.5rem;
         margin: 2rem;
     }
+    .home .content h3{
+        font-size: 3.5rem;
+    }
 
-}
+  }
 }
 
 @media (max-width:450px){
     html{
         font-size: 50%;
+    }
+    .title{
+        font-size: 3rem;
     }
 }

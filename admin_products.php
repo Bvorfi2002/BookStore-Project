@@ -65,12 +65,16 @@ if(isset($_POST['update_product'])){
     $update_old_image = $_POST['update_old_image'];
 
     
+<<<<<<< HEAD
     if(!empty($update_image)){
         if($update_image_size > 2000000){
             $message[] = 'image file size is too large';
             mysqli_query($conn, "UPDATE `products` SET image = '$update_image' WHERE id = '$update_p_id'") or die ('query failed');
             move_uploaded_file($update_image_tmp_name, $update_folder);
             unlink('uploaded_img/'.$update_old_image);
+=======
+    
+>>>>>>> 484c017b1d1a514d50ddb003d1100308fd19a4bf
 
 
         }
@@ -133,7 +137,7 @@ if(isset($_POST['update_product'])){
         <div class="box">
             <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
 
-            <div class="name">$<?php echo $fetch_products['name']; ?></div>
+            <div class="name"><?php echo $fetch_products['name']; ?></div>
             <div class="price">$<?php echo $fetch_products['price']; ?>/-</div>
             <a href="admin_products.php?update=<?php echo $fetch_products['id']; ?>"class="option-btn">Update</a>
             <a href="admin_products.php?delete=<?php echo $fetch_products['id']; ?>"class="delete-btn" onclick="return confirm('delete this product')">Delete</a>
