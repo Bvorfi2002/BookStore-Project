@@ -65,16 +65,12 @@ if(isset($_POST['update_product'])){
     $update_old_image = $_POST['update_old_image'];
 
     
-<<<<<<< HEAD
     if(!empty($update_image)){
         if($update_image_size > 2000000){
             $message[] = 'image file size is too large';
             mysqli_query($conn, "UPDATE `products` SET image = '$update_image' WHERE id = '$update_p_id'") or die ('query failed');
             move_uploaded_file($update_image_tmp_name, $update_folder);
             unlink('uploaded_img/'.$update_old_image);
-=======
-    
->>>>>>> 484c017b1d1a514d50ddb003d1100308fd19a4bf
 
 
         }
@@ -101,7 +97,7 @@ if(isset($_POST['update_product'])){
     <body>
         <?php include 'admin_header.php'; ?>
 
-       <!-- products CRUD section starts-->
+      
        
        <section class="add-products">
 
@@ -118,7 +114,7 @@ if(isset($_POST['update_product'])){
        </section>
 
 
-       <!-- products CRUD section ends-->
+       
 
 
        <section class="show-products">
@@ -192,7 +188,7 @@ if(isset($_POST['update_product'])){
 
 
 
-        <!--custom admin js file link -->
+       
 
         <script src="js/admin_script.js"></script>
 
