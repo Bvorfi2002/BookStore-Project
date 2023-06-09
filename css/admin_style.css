@@ -510,6 +510,9 @@ section{
     html{
         font-size: 50%;
     }
+    .title{
+        font-size: 3rem;
+    }
 }
 
 .add-products form{
