@@ -24,7 +24,7 @@
 }
 
 *::selection{
-    background-color: var(--purple);
+    background-color: var(--red);
     color: var(--white);
 
 }
@@ -41,7 +41,7 @@
 }
 
 *::-webkit-scrollbar-thumb{
-    background-color: var(--purple);
+    background-color: var(--red);
 }
 
 html{
@@ -126,7 +126,7 @@ section{
 
 .white-btn,
 .btn{
-    background-color: var(--purple);
+    background-color: var(--red);
 
 }
 
@@ -174,7 +174,7 @@ section{
     color: var(--black);
 }
 .header .flex .logo span{
-    color: var(--purple);
+    color: var(--red);
 }
 
 .header .flex .navbar a{
@@ -184,7 +184,7 @@ section{
 }
 
 .header .flex .navbar a:hover{
-    color: var(--purple);
+    color: var(--red);
 }
 
 .header .flex .icons div{
@@ -195,7 +195,7 @@ section{
 }
 
 .header .flex .icons div:hover{
-    color: var(--purple);
+    color: var(--red);
 }
 
 .header .flex .account-box{
@@ -225,7 +225,7 @@ section{
 }
 
 .header .flex .account-box p span{
-    color: var(--purple);
+    color: var(--red);
 }
 
 .header .flex .account-box .delete-btn{
@@ -264,7 +264,7 @@ section{
     margin-top: 1.5rem;
     padding: 1.5rem;
     background-color: var(--light-bg);
-    color: var(--purple);
+    color: var(--red);
     font-size: 2rem;
     border-radius: .5rem;
     border: var(--border);
@@ -297,7 +297,7 @@ section{
 }
 
 .orders .box-container .box p span{
-    color: var(--purple);
+    color: var(--red);
 }
 
 .orders .box-container .box form{
@@ -425,7 +425,7 @@ section{
 }
 
 .users .box-container .box p span{
-    color: var(--purple);
+    color: var(--red);
 }
 
 .users .box-container .box .delete-btn{
@@ -459,7 +459,7 @@ section{
 }
 
 .messages .box-container .box p span{
-    color: var(--purple);
+    color: var(--red);
 }
 
 .messages .box-container .box .delete-btn{
