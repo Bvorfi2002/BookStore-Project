@@ -45,6 +45,9 @@ if(isset($_POST['add_product'])){
 
 if(isset($_GET['delete'])){
     $delete_id = $_GET['delete'];
+    $delete_image_query = mysqli_query($conn,"SELECT image FROM `products` WHERE id = '$delete_id'") or die('query failed');
+    $fetch_delete_image = mysqli_fetch_assoc($delete_image_query);
+    unlink('uploaded/img'.$fetch_delete_image['image']);
     mysqli_query($conn,"DELETE FROM `products` WHERE id = '$delete_id'") or die('query failed');
     header('location:admin_products.php');
 }
@@ -55,11 +58,25 @@ if(isset($_POST['update_product'])){
     $update_price = $_POST['update_price'];
 
     mysqli_query($conn, "UPDATE `products` SET name = '$update_name', price = '$update_price' WHERE id = '$update_p_id'") or die ('query failed');
+    $update_image = $_FILES['update_image']['name'];
+    $update_image_tmp_name = $_FILES['update_image']['tmp_name'];
+    $update_image_size = $_FILES['update_image']['size'];
+    $update_folder = 'uploaded_img/' .$update_image;
+    $update_old_image = $_POST['update_old_image'];
 
-    $update_image = $_FILES[''];
     
-    if(!empty())
+    if(!empty($update_image)){
+        if($update_image_size > 2000000){
+            $message[] = 'image file size is too large';
+            mysqli_query($conn, "UPDATE `products` SET image = '$update_image' WHERE id = '$update_p_id'") or die ('query failed');
+            move_uploaded_file($update_image_tmp_name, $update_folder);
+            unlink('uploaded_img/'.$update_old_image);
 
+
+        }
+    }
+
+    header('location:admin_products.php');
 }
 
 ?>
