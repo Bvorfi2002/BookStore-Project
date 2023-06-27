@@ -132,19 +132,19 @@ if(isset($_POST['order_btn'])){
          </div>
          <div class="inputBox">
             <span>city :</span>
-            <input type="text" name="city" required placeholder="e.g. mumbai">
+            <input type="text" name="city" required placeholder="e.g. Peshkopi">
          </div>
          <div class="inputBox">
             <span>state :</span>
-            <input type="text" name="state" required placeholder="e.g. maharashtra">
+            <input type="text" name="state" required placeholder="e.g. diber">
          </div>
          <div class="inputBox">
             <span>country :</span>
-            <input type="text" name="country" required placeholder="e.g. india">
+            <input type="text" name="country" required placeholder="e.g. albania">
          </div>
          <div class="inputBox">
             <span>pin code :</span>
-            <input type="number" min="0" name="pin_code" required placeholder="e.g. 123456">
+            <input type="number" min="0" name="pin_code" required placeholder="e.g. 8301">
          </div>
       </div>
       <input type="submit" value="order now" class="btn" name="order_btn">
