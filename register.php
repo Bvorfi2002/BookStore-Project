@@ -2,30 +2,32 @@
 
 include 'config.php';
 
-if(isset($_POST['submit'])){
+if (isset($_POST['submit'])) {
+  $name = mysqli_real_escape_string($conn, $_POST['name']);
+  $email = mysqli_real_escape_string($conn, $_POST['email']);
+  $pass = mysqli_real_escape_string($conn, $_POST['password']);
+  $cpass = mysqli_real_escape_string($conn, $_POST['cpassword']);
+  $user_type = $_POST['user_type'];
 
-  $name=mysqli_real_escape_string($conn,$_POST['name']);
-  $email=mysqli_real_escape_string($conn,$_POST['email']);
-  $pass=mysqli_real_escape_string($conn,$_POST['password']);
-  $cpass=mysqli_real_escape_string($conn,$_POST['cpassword']);
-  $user_type=$_POST['user_type'];
+  $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email='$email' AND password='$pass'") or die('query failed');
 
-  $select_users=mysqli_query($conn,"SELECT * FROM `users` WHERE email='$email' AND password='$pass'") or die('query failed');
-
-if(mysqli_num_rows($select_users)>0){
-  $message[]='user already exist!';
-}
-else{
-  if($pass != $cpass){
-    $message[]='confirm password not matched!';
+  if (mysqli_num_rows($select_users) > 0) {
+      $message[] = 'User already exists!';
+  } else {
+      if ($pass != $cpass) {
+          $message[] = 'Confirm password does not match!';
+      } else {
+          // Password validation
+          $passwordPattern = '/^(?=.*[0-9]{2,})(?=.*[!@#$%^&*()\-_=+{};:<,.>?])(?=.*[a-zA-Z]).{8,16}$/';
+          if (!preg_match($passwordPattern, $pass)) {
+              $message[] = 'Password must be 8-16 characters long, contain at least 2 numeric values, and include at least 1 symbol.';
+          } else {
+              mysqli_query($conn, "INSERT INTO `users`(name,email,password,user_type) VALUES('$name','$email','$cpass','$user_type')") or die('query failed');
+              $message[] = 'Registered successfully';
+              header('location: login.php');
+          }
+      }
   }
-  else{
-    mysqli_query($conn,"INSERT INTO `users`(name,email,password,user_type) VALUES('$name','$email','$cpass','$user_type')") or die('query failed');
-    $message[]='registered successfully';
-    header('location:login.php');
-  }
-  
-}
 }
 ?>
 
